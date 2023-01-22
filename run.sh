@@ -22,6 +22,7 @@ function display_help {
     echo "      down [options]          Execute docker-compose down";
     echo "";
     echo "  develop:";
+    echo "      refresh-db              refresh databse(migrate & seed)";
     echo "      artisan [sub-command]   Execute artisan command on APP Container";
     echo "      tinker                  Execute php artisan tinekr on APP Container";
     echo "";
@@ -56,6 +57,9 @@ elif [ $1 = "up" ]; then
 elif [ $1 = "down" ]; then
   shift 1
   docker-compose down $@
+
+elif [ $1 = "refresh-db" ]; then
+  php artisan migrate:refresh --seed
 
 elif [ $1 = "composer" ]; then
   shift 1

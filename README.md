@@ -17,11 +17,18 @@ Laravelのmacro機能実装サンプル
 機能
 ----------
 
+* Web
+
 |         機能         |          URL           |
 | -------------------- | ---------------------- |
 | Laravel              | http://localhost/      |
 | DB WebGUI(adminer)   | http://localhost:8080/ |
 | Mail WebGUI(mailhog) | http://localhost:8025/ |
+
+* CIツール
+    - php code sniffer
+    - phpmd
+    - larastan(phpstan)
 
 
 使い方

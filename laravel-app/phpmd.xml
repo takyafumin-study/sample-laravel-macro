@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="Custom_PHPMD">
+    <description>Custom ruleset PHPMD</description>
+    <rule ref="rulesets/codesize.xml" />
+    <rule ref="rulesets/controversial.xml">
+        <!-- 判定から除外: 変数名がキャメルケースかどうか -->
+        <exclude name="CamelCasePropertyName" />
+        <exclude name="CamelCaseParameterName" />
+        <exclude name="CamelCaseVariableName" />
+    </rule>
+    <rule ref="rulesets/design.xml" />
+    <rule ref="rulesets/unusedcode.xml" />
+    <rule ref="rulesets/naming.xml">
+        <!-- 判定から除外: 変数名の長さ -->
+        <exclude name="LongVariable" />
+        <exclude name="ShortVariable" />
+    </rule>
+</ruleset>

@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Task\Presentation\Controller\TaskCreateController;
 use Task\Presentation\Controller\TaskIndexController;
+use Task\Presentation\Controller\TaskUpdateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +22,6 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'tasks', 'as' => 'task.'], function () {
     Route::get('/', [TaskIndexController::class, 'index'])->name('index');
+    Route::get('store', [TaskCreateController::class, 'store'])->name('store');
+    Route::get('update/{id}', [TaskUpdateController::class, 'update'])->name('update');
 });

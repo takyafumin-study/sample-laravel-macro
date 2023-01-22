@@ -69,6 +69,9 @@ elif [ $1 = "artisan" ]; then
   shift 1
   php artisan $@
 
+elif [ $1 = "tinker" ]; then
+  php artisan tinker
+
 elif [ $1 = "phpcs" ]; then
   composer phpcs
 
